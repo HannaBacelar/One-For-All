@@ -7,7 +7,7 @@
     "tabela_que_contem_historico_de_reproducoes": "reproductions",
     "coluna_seguindo_artistas": "artist_id",
     "tabela_que_contem_seguindo_artistas": "followers",
-    "coluna_artista": "first_name",
+    "coluna_artista": "name_artist",
     "tabela_que_contem_artista": "Artists",
     "coluna_album": "album",
     "tabela_que_contem_album": "Albums",

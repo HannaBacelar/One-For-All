@@ -1,4 +1,4 @@
-CREATE DATABASE SpotifyClone;
+ CREATE DATABASE SpotifyClone;
 
 CREATE TABLE SpotifyClone.plans(
 plan_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,8 +17,7 @@ FOREIGN KEY(plan_id)  REFERENCES SpotifyClone.plans(plan_id)
 
 CREATE TABLE SpotifyClone.Artists(
 artist_id INT PRIMARY KEY AUTO_INCREMENT,
-first_name VARCHAR(50) NOT NULL,
-last_name VARCHAR(50)
+name_artist VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE SpotifyClone.followers(
@@ -60,7 +59,6 @@ values ('gratuito', 0.00),
        ('universitario', 5.99),
        ( 'pessoal', 6.99);
        
-       
 INSERT INTO SpotifyClone.users (user, age, plan_id, singature_date )
 values ('Thati', 23, 1, '2019-10-20'),
        ('Cintia', 35, 2, '2017-12-30'),
@@ -73,13 +71,13 @@ values ('Thati', 23, 1, '2019-10-20'),
        ('Angelina', 42, 2, '2018-04-29'),
        ('Paul', 46, 2, '2017-01-17');
        
-INSERT INTO SpotifyClone.Artists(first_name, last_name)
-values ( 'Walter', 'Phoenix'),
-('Peter', 'Strong'),
-('Lance', 'Day'),
-('Freedie', 'Shannon'),
-('Tyler', 'Isle'),
-('Fog', null);
+INSERT INTO SpotifyClone.Artists(name_artist)
+values ( 'Walter Phoenix'),
+('Peter Strong'),
+('Lance Day'),
+('Freedie Shannon'),
+('Tyler Isle'),
+('Fog');
 
 INSERT INTO SpotifyClone.followers(user_id, artist_id)
 values (1, 1), (1, 4), (1, 3), (2, 1), (2, 3),      
@@ -182,5 +180,3 @@ VALUES (1, 36, '2020-02-28 10:45:55'),
        (10, 21, '2017-12-04 05:33:43'),
        (10, 12, '2017-07-27 05:24:49'),
        (10, 13, '2017-12-25 01:03:57');
-
-       -- primary keys na reproduction e follow
